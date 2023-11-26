@@ -85,6 +85,7 @@ public class RegisterController {
             map.put("id", String.valueOf(resultSet.getInt("id")));
             map.put("username", resultSet.getString("userName"));
             map.put("password", resultSet.getString("password"));
+            map.put("daysofleave", String.valueOf(resultSet.getInt("daysofleave")));
             return new ResponseEntity<>(map, HttpStatus.OK);
         } catch (SQLException e) {
             e.printStackTrace();
